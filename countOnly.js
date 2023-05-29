@@ -13,10 +13,10 @@ const assertEqual = function(actual, expected) {
 // itemsToCount: an object specifying what to count
 
 const countOnly = function(allItems, itemsToCount) {
-  var count = {};
+  const count = {};
 
   for (var i = 0; i < itemsToCount.length; i++) {
-    var item = itemsToCount[i];
+    const item = itemsToCount[i];
     if (allItems[item] === true) {
       if (count[item]) {
         count[item]++;
@@ -29,15 +29,15 @@ const countOnly = function(allItems, itemsToCount) {
   return count;
 };
 
-var itemsToCount = ['a', 'a', 'a', 'b', 'c', 'd', 'e', 'a'];
-var allItems = {
+const itemsToCount = ['a', 'a', 'a', 'b', 'c', 'd', 'e', 'a'];
+const allItems = {
   a: true,
   b: true,
   d: false,
   f: true
 };
 
-var result = countOnly(allItems, itemsToCount);
+const result = countOnly(allItems, itemsToCount);
 console.log(result); 
 
 
